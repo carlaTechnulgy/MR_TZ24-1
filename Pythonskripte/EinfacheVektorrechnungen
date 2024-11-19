@@ -1,0 +1,27 @@
+# Python initialisieren: 
+import numpy as np;     # in numpy mit einem array/bei sympy eine Matrix(siehe unten auskommentiert)
+# Parameter: 
+u=np.array([2,-1]);     # Vektor u als array eingeben
+v=np.array([-3,3]);     # (beliebig viele Vektoren können definiert werden)
+w=np.array([1,1/2]); 
+# Berechnungen: 
+r=u+v;                  # Termaufstellen 
+# Ausgabe: 
+print(f"r = {r}");      # Ergebnisvektor R im Terminal ausgeben 
+
+
+
+
+#Vektorrechnung mit Sympy
+'''
+#Python initialisieren: 
+import IPython.display as dp; 
+import sympy as sp; 
+# Parameter: 
+u=sp.Matrix([[2],[-1]]);    # Vektor als Matrix definieren
+v=sp.Matrix([[-3],[3]]); 
+w=sp.Matrix([[1],[1/2]]); 
+Berechnungen: r=...;        # Term zu Berechnung aufstellen
+# Ausgabe: 
+dp.display(r);              # Ergebnisvektor r im Terminal ausgeben
+'''

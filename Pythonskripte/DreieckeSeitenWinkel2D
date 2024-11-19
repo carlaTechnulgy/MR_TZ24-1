@@ -1,0 +1,35 @@
+# Python initialisieren: 
+import numpy as np; 
+# Parameter: 
+A=np.array([...,...]);          # definieren der Vektoren als Array(2D!)
+B=np.array([...,...]); 
+C=np.array([...,...]); 
+pr=3; 
+# Funktionen: 
+def Laenge(v): l=np.sqrt(np.dot(v,v)); return l; 
+def Winkel(v,w): phi=np.arccos(np.dot(v,w)/(Laenge(v)*Laenge(w))); return phi; 
+# Seitenvektoren: 
+a=C-B; 
+b=A-C; 
+c=B-A; 
+# Seitenlaengen: 
+l_a=Laenge(a); 
+l_b=Laenge(b); 
+l_c=Laenge(c); 
+# Innenwinkel: 
+w_a=Winkel(-b,c); 
+w_b=Winkel(-c,a); 
+w_c=Winkel(-a,b); 
+# Ausgabe: 
+print('--------------------------------------------------'); 
+print(__file__); 
+print('--------------------------------------------------'); 
+print('Seiten:'); 
+print(f"a = {l_a:#.{pr}g}"); 
+print(f"b = {l_b:#.{pr}g}"); 
+print(f"c = {l_c:#.{pr}g}"); 
+print('Innenwinkel:'); 
+print(f"alpha = {w_a/np.pi:#.{pr}g} pi"); 
+print(f"beta = {w_b/np.pi:#.{pr}g} pi"); 
+print(f"gamma = {w_c/np.pi:#.{pr}g} pi"); 
+print('--------------------------------------------------');

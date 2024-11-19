@@ -1,0 +1,13 @@
+# Python initialisieren: 
+import IPython.display as dp; 
+import sympy as sp; 
+# Python konfigurieren: 
+sp.init_printing(); 
+m,N,phi,x=sp.symbols('m,N,varphi,x');   # definieren der Maßeinheiten(in dem Fall Meter, Newton)
+# Parameter: 
+v=sp.Matrix([[3.0*m],[3.2*m],[7.2*m]]); # definieren des Vektors v als Matrix(Masseinheit wird zur Zahl multipliziert)
+w=sp.Matrix([[3*N],[4*N],[-5*N]]); 
+# Berechnungen: 
+p=sp.simplify(v.dot(w));                # Auersche Magie macht sein Ding (sympy kann das einfach von natur aus)
+# Ausgabe: 
+dp.display(p);                          # Ausgabe des Skalarproduktes
